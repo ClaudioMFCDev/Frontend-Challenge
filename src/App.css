@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  background-color: #313342;
+  align-items: center;
+  padding: 0 2rem;
+  justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  padding-bottom: 0.25rem;
+  border-right: 2px solid #FAFBFD;
+  padding-right: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .logo svg{
+  opacity: 1.5;
+} */
+
+/* ul style */
+.nav-linksL, .nav-linksR, .auth-buttons {
+  display: flex;
+  list-style: none;
+}
+
+.nav-linksL li {
+  margin-left: 45px;
+}
+
+.nav-linksR li {
+  margin-left: 45px;
+}
+
+.nav-linksL a, .nav-linksR a, .auth-buttons a {
+  color: #FAFBFD;
+  text-decoration: none;
+  font-size: 0.7rem;
+  margin-right: 2px;
+}
+
+.nav-links a:hover {
+  color: #e3e3e3;
+}
+
+.auth-buttons {
+  display: flex;
+  align-content: center;
+}
+
+.sign-in-btn {
+  all: unset;
+  height: 0.2px;
+  background-color: #63c37b;
+  font-size: 0.7rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+/*cards content*/
+.content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 5rem;
+  gap: 1rem;
+}
+
+.top-buttons {
+  display: flex;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  padding: 10px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown-list {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-list-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list-item:hover {
+  background-color: #f1f1f1;
 }
