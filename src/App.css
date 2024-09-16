@@ -8,13 +8,6 @@
   display: flex;
 }
 
-.centered-flex {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center; 
-  gap: 10px; 
-}
-
 
 body {
   background-image: url('purple.png'); /* Ruta relativa desde la carpeta public */
@@ -98,7 +91,7 @@ nav {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin: 15rem;
+  margin: 13rem;
 }
 
 .content h2 {
@@ -109,6 +102,7 @@ nav {
 
 #inside {
   background-color: #313342;
+  border: 2px solid #464b6b ;
 }
 
 .cards-container, .top-cards, #pass-pages {
@@ -120,11 +114,18 @@ nav {
   margin: 2rem;
 }
 
+.centered-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; 
+  gap: 10px; 
+}
+
 /*card*/
 .card {
   background-color: #333649;
-  width: 200px; /* Ajusta el tamaño de la tarjeta */
-  padding: 15px;
+  width: 120px; /* Ajusta el tamaño de la tarjeta */
+  padding: 10px 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
@@ -141,7 +142,7 @@ nav {
 
 .icon-green {
   color: var(--myGreen);
-  font-size: 14px;
+  font-size: 10px;
   margin-right: 5px;
 }
 
@@ -152,34 +153,42 @@ nav {
   text-align: center;
 }
 
-
-.card-stock {
-  background-color: #1b5e20;
-  color: white;
-  padding: 3px 6px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  text-align: center;
+.card-amount input {
+  all: unset;
+  width: 30px;
+  background-color: transparent;
 }
 
-.image {
-  margin: 10px 0;
+
+.card-stock {
+  background-color: transparent;
+  color: var(--myGreen);
+  padding: 2px 1px;
+  border-radius: 5px;
+  border: 1px solid var(--myGreen);
+  margin-bottom: 2px;
+  margin-top: 0;
   text-align: center;
+  width: 4rem;
+}
+
+
+
+.image {
+  margin-top: 5px;
+  text-align: left;
 }
 
 .image img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   border-radius: 5px;
 }
 
 .card-details {
-  text-align: center;
+  text-align: left;
 }
-
-/*each card*/
-
 
 
 #card-state {
@@ -191,10 +200,14 @@ nav {
 
 .card-name {
   font-weight: bold;
+  margin: 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-price {
-  font-size: 18px;
+  font-size: 12px;
   color: white;
   margin: 5px 0;
 }
@@ -202,38 +215,40 @@ nav {
 .old-price {
   text-decoration: line-through;
   color: #ff5252;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .card-description {
   font-size: 12px;
   color: #b0b0b0;
-  margin: 10px 0;
+  margin: 6px 0;
 }
 
 .card-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 10px;
 }
-
 
 .details-btn,
 .add-btn {
   background-color: transparent;
   border: 1px solid white;
   color: white;
-  padding: 5px 10px;
+  padding: 5px 8px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .add-btn {
-  background-color: var(--myGreen);
+  background-color: #4c56c0;
   border: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 50px;
+
 }
 
 .add-btn svg {
@@ -369,5 +384,58 @@ nav {
 .search-input:focus {
   outline: none;
 }
+
+/*pagination*/
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #333649;
+  color: white;
+  border: 1px solid #4c56c0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:disabled {
+  background-color: #4e5671;
+  cursor: not-allowed;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #4e5671;
+}
+
+.pagination-pages {
+  display: flex;
+  gap: 5px;
+}
+
+.pagination-number {
+  background-color: #3c445b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-number:hover {
+  background-color: #4e5671;
+}
+
+.pagination-number.active {
+  background-color: #4c56c0;
+  font-weight: bold;
+}
+
 
 

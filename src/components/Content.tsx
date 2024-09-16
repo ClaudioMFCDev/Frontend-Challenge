@@ -6,11 +6,13 @@ import {
   faWandSparkles,
   faCircle,
   faCartShopping,
+  faDragon,
 } from "@fortawesome/free-solid-svg-icons";
 import MyPassPages from "./Button/PassPages";
 import DropdownButton from "./Button/SelectBtn";
 import SearchInput from "./Button/Search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Pagination from "./Button/Pagination";
 
 const items: string[] = ["featured", "price", "rarity"];
 const cards = [
@@ -20,9 +22,9 @@ const cards = [
     price: "$450.00",
     oldPrice: "$522.50",
     icon: "faGhost",
-    name: "Melisa",
+    name: "Ward 123",
     description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/pet1.png",
+    image: "/ward1.png",
   },
   {
     state: "ON SALE",
@@ -30,9 +32,9 @@ const cards = [
     price: "$450.00",
     oldPrice: "$522.50",
     icon: "faGhost",
-    name: "Melisa",
+    name: "Galactic ward",
     description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/pet1.png",
+    image: "/ward2.jpg",
   },
   {
     state: "ON SALE",
@@ -40,9 +42,9 @@ const cards = [
     price: "$450.00",
     oldPrice: "$522.50",
     icon: "faGhost",
-    name: "Melisa",
+    name: "Prestigious ward",
     description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/pet1.png",
+    image: "/ward3.png",
   },
   {
     state: "ON SALE",
@@ -50,9 +52,9 @@ const cards = [
     price: "$450.00",
     oldPrice: "$522.50",
     icon: "faGhost",
-    name: "Melisa",
+    name: "Ward 123",
     description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/pet1.png",
+    image: "/ward1.png",
   },
   {
     state: "ON SALE",
@@ -60,13 +62,75 @@ const cards = [
     price: "$450.00",
     oldPrice: "$522.50",
     icon: "faGhost",
-    name: "Melisa",
+    name: "Galactic ward",
     description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/pet1.png",
+    image: "/ward2.jpg",
+  },
+  {
+    state: "ON SALE",
+    stock: "In sock",
+    price: "$450.00",
+    oldPrice: "$522.50",
+    icon: "faGhost",
+    name: "Prestigious ward",
+    description: "Melisa is a dog who love watch movies and eat pop corn",
+    image: "/ward3.png",
+  },
+  {
+    state: "ON SALE",
+    stock: "In sock",
+    price: "$450.00",
+    oldPrice: "$522.50",
+    icon: "faGhost",
+    name: "Ward 123",
+    description: "Melisa is a dog who love watch movies and eat pop corn",
+    image: "/ward1.png",
+  },
+  {
+    state: "ON SALE",
+    stock: "In sock",
+    price: "$450.00",
+    oldPrice: "$522.50",
+    icon: "faGhost",
+    name: "Galactic ward",
+    description: "Melisa is a dog who love watch movies and eat pop corn",
+    image: "/ward2.jpg",
+  },
+  {
+    state: "ON SALE",
+    stock: "In sock",
+    price: "$450.00",
+    oldPrice: "$522.50",
+    icon: "faGhost",
+    name: "Prestigious ward",
+    description: "Melisa is a dog who love watch movies and eat pop corn",
+    image: "/ward3.png",
+  },
+  {
+    state: "ON SALE",
+    stock: "In sock",
+    price: "$450.00",
+    oldPrice: "$522.50",
+    icon: "faGhost",
+    name: "Galactic ward",
+    description: "Melisa is a dog who love watch movies and eat pop corn",
+    image: "/ward2.jpg",
+  },
+  {
+    state: "ON SALE",
+    stock: "In sock",
+    price: "$450.00",
+    oldPrice: "$522.50",
+    icon: "faGhost",
+    name: "Prestigious ward",
+    description: "Melisa is a dog who love watch movies and eat pop corn",
+    image: "/ward3.png",
   },
 ];
 
 const MyContent = () => {
+    const currentPage = 1; // Cambia esta variable para la página actual
+    const totalPages = 5; // Total de páginas en tu catálogo
   return (
     <section className="content">
       <h2 className="h2-top">Condimentum consectetur</h2>
@@ -77,9 +141,7 @@ const MyContent = () => {
           icon={faWandSparkles}
           className="dropdown-button-opac dropdown-button-lg"
         />
-
         <SearchInput />
-
         <DropdownButton
           title="Price"
           label="All"
@@ -87,7 +149,6 @@ const MyContent = () => {
           icon={faSackDollar}
           className="dropdown-button-opac"
         />
-
         <DropdownButton
           title="Item Type"
           label="All"
@@ -116,16 +177,12 @@ const MyContent = () => {
                   ON SALE
                 </p>
                 <div className="card-amount">
-                  <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
+                    <input type="number" value={1} />
                 </div>
               </div>
 
               <div className="card-stock">
-                <span className="stock-label">In stock</span>
+                <span className="stock-label">in stock</span>
               </div>
 
               <div className="image">
@@ -133,12 +190,14 @@ const MyContent = () => {
               </div>
 
               <div className="card-details">
-                <p className="card-name">{card.name}</p>
+                <p className="card-name">{card.name}
+                <FontAwesomeIcon icon={faDragon} className="icon-green"/>
+                </p>
                 <p className="card-price">
                   $450.00 <span className="old-price">$522.50</span>
                 </p>
                 <p className="card-description">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                  Lorem ipsum dolor sit amet...
                 </p>
               </div>
 
@@ -152,7 +211,7 @@ const MyContent = () => {
           ))}
         </div>
         <div id="pass-pages">
-          <MyPassPages />
+        <Pagination currentPage={currentPage} totalPages={totalPages} />
         </div>
       </div>
     </section>
