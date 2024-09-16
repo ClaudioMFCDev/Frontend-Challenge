@@ -5,6 +5,7 @@ import {
   faSliders,
   faWandSparkles,
   faCircle,
+  faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import MyPassPages from "./Button/PassPages";
 import DropdownButton from "./Button/SelectBtn";
@@ -109,29 +110,44 @@ const MyContent = () => {
         <div className="cards-container">
           {cards.map((card, index) => (
             <div className="card">
-              <div id="content-card-top" className="centered-flex">
-                <div>
-                  <p id="card-state">
-                    <FontAwesomeIcon icon={faCircle} className="icon-green" />
-                    {card.state}
-                  </p>
-                  <p className="card-stock">{card.stock}</p>
-                </div>
+              <div className="card-header">
+                <p id="card-state">
+                  <FontAwesomeIcon icon={faCircle} className="icon-green" />
+                  ON SALE
+                </p>
                 <div className="card-amount">
-                  <button>1 +</button>
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
                 </div>
               </div>
+
+              <div className="card-stock">
+                <span className="stock-label">In stock</span>
+              </div>
+
               <div className="image">
                 <img src={card.image} alt={card.name} />
               </div>
-              <p>{card.name}</p>
-              <div>
-                <p>{card.price}</p>
-                <p>{card.oldPrice}</p>
+
+              <div className="card-details">
+                <p className="card-name">{card.name}</p>
+                <p className="card-price">
+                  $450.00 <span className="old-price">$522.50</span>
+                </p>
+                <p className="card-description">
+                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                </p>
               </div>
-              <p>{card.description}</p>
-              <button>Details</button>
-              <button>ADD</button>
+
+              <div className="card-actions">
+                <button className="details-btn">DETAILS</button>
+                <button className="add-btn">
+                  ADD <FontAwesomeIcon icon={faCartShopping} />
+                </button>
+              </div>
             </div>
           ))}
         </div>
