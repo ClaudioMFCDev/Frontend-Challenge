@@ -22,11 +22,6 @@ nav {
   padding-right: 2rem;
 }
 
-/* .logo svg{
-  opacity: 1.5;
-} */
-
-/* ul style */
 .nav-linksL, .nav-linksR, .auth-buttons {
   display: flex;
   list-style: none;
@@ -69,15 +64,92 @@ nav {
   gap: 5px;
 }
 
-
 /*cards content*/
+
 .content {
+  padding: 2rem 0;
+  background-color: #e0e0e0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 5rem;
+  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+  margin: 10rem;
 }
+
+#inside {
+  background-color: #a29e9e;
+}
+
+.cards-container, .top-cards, #pass-pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+}
+
+/*card*/
+.card {
+  background-color: rgb(118, 118, 255);
+  width: 17rem;
+  height: 23rem;
+  padding: 1rem;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+  height: 12rem;
+  position: relative;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card p {
+  color: white;
+  padding: 1rem;
+}
+
+.image span {
+  position: absolute;
+  bottom: 8px;
+  left: 75%;
+  padding: 0.4rem;
+  border-radius: 5%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-25%);
+}
+
+.card button {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  background-color: #4c4caf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover{
+  background-color: #5c5cd3;
+  transition-duration: 300ms;
+}
+
+/*finish card*/
 
 .top-buttons {
   display: flex;
@@ -114,3 +186,5 @@ nav {
 .dropdown-list-item:hover {
   background-color: #f1f1f1;
 }
+
+
