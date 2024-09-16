@@ -1,4 +1,32 @@
 
+:root {
+  --myGreen: #5fd67c; 
+}
+
+
+.flex {
+  display: flex;
+}
+
+.centered-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 10px; 
+}
+
+.icon-green {
+  color: var(--myGreen);
+}
+
+body {
+  background-image: url('purple.png'); /* Ruta relativa desde la carpeta public */
+  background-size: cover; /* La imagen cubre toda la pantalla */
+  background-position: center; /* La imagen está centrada */
+  background-repeat: no-repeat; /* La imagen no se repite */
+  min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+  margin: 0; /* Elimina cualquier margen predeterminado del body */
+}
 
 nav {
   display: flex;
@@ -54,7 +82,7 @@ nav {
 .sign-in-btn {
   all: unset;
   height: 0.2px;
-  background-color: #63c37b;
+  background-color: var(--myGreen);
   font-size: 0.7rem;
   margin-left: 1rem;
   padding: 1rem;
@@ -67,18 +95,23 @@ nav {
 /*cards content*/
 
 .content {
-  padding: 2rem 0;
-  background-color: #e0e0e0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin: 10rem;
+  margin: 15rem;
+}
+
+.content h2 {
+  font-size: 45px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 #inside {
-  background-color: #a29e9e;
+  background-color: #313342;
 }
 
 .cards-container, .top-cards, #pass-pages {
@@ -93,20 +126,17 @@ nav {
 /*card*/
 .card {
   background-color: rgb(118, 118, 255);
-  width: 17rem;
-  height: 23rem;
+  width: 10rem;
+  height: 15rem;
   padding: 1rem;
   border-radius: 2%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+
   box-sizing: border-box;
 }
 
 .image {
-  width: 100%;
-  height: 12rem;
+  width: 50%;
+  height: 5rem;
   position: relative;
   text-align: center;
 }
@@ -149,10 +179,33 @@ nav {
   transition-duration: 300ms;
 }
 
+/*each card*/
+
+.card-stock {
+  border: var(--myGreen) solid 1px;
+  color: var(--myGreen);
+  font-size: small;
+  border-radius: 10px;
+  height: 10px;
+  width: 40px;
+}
+
+#card-state {
+  display: flex;
+  font-size:small;
+  align-items: center ;
+}
+
 /*finish card*/
 
 .top-buttons {
   display: flex;
+}
+
+.top-cards {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
 }
 
 /* .dropdown {
@@ -190,6 +243,8 @@ nav {
 
 #filters {
   display: flex;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 .text-btn {
@@ -224,6 +279,51 @@ nav {
 
 .dropdown-list-item:hover {
   background-color: #f1f1f1;
+}
+
+/*search button*/
+
+.search-form {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente si es necesario */
+  align-items: center;
+  width: 100%; /* Asegura que el form ocupe el 100% del ancho disponible */
+  max-width: 600px; /* Ajusta el ancho máximo si es necesario */
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%; /* Mantiene el ancho al 100% del contenedor */
+  height: 50px;
+  padding: 8px 32px 8px 40px; /* Padding ajustado para el ícono */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Elimina los bordes */
+  border-radius: 4px; /* Puedes ajustar el borde redondeado si lo deseas */
+  font-size: 16px;
+  color: #fff; /* Texto de color blanco (o cualquier otro que prefieras) */
+  box-sizing: border-box; /* Asegura que el padding y otros estilos no afecten el tamaño */
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.9); /* Cambia el color a blanco semi-transparente */
+  opacity: 1; /* Asegura que la opacidad se aplique completamente en algunos navegadores */
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  pointer-events: none; /* Asegura que el icono no interrumpa la escritura */
+}
+
+.search-input:focus {
+  outline: none;
 }
 
 
