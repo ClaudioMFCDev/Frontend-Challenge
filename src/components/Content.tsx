@@ -1,3 +1,4 @@
+import { faFeatherPointed, faSackDollar, faSliders, faWandSparkles } from "@fortawesome/free-solid-svg-icons";
 import MyPassPages from "./Button/PassPages";
 import DropdownButton from "./Button/SelectBtn";
 
@@ -46,13 +47,40 @@ const MyContent = () => {
         <section className="content">
             <h2 className="h2-top">Condimentum consectetur</h2>
             <div id="filters">
+                <DropdownButton
+                label="Select a game"
+                items={items}
+                icon={faWandSparkles}
+                className="dropdown-button-opac dropdown-button-lg"
+                />
+
+                <DropdownButton
+                title="Price"
+                label="All"
+                items={items}
+                icon={faSackDollar}
+                className="dropdown-button-opac"
+                />
                 
+                <DropdownButton
+                title="Item Type"
+                label="All"
+                items={items}
+                icon={faFeatherPointed}
+                className="dropdown-button-opac"
+                />
             </div>
             <div id="inside">
                 <div className="top-cards">
                     <div className="top-buttons">
                         <p>Showing 20 - from 125</p>
-                        <DropdownButton label="featured" items={items}/>
+                        <DropdownButton
+                        title="Sort By"
+                        label="featured"
+                        items={items}
+                        icon={faSliders}
+                        className="dropdown-button"
+                         />
                     </div>
                 </div>
                 <div className="cards-container">

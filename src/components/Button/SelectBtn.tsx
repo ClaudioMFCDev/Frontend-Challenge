@@ -1,11 +1,20 @@
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 
 interface DropdownButtonProps {
+  title?: string;
   label: string;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  className?: string;
+  icon: IconDefinition;
   items: string[];
 }
 
-const DropdownButton: React.FC<DropdownButtonProps> = ({ label, items }) => {
+
+const DropdownButton: React.FC<DropdownButtonProps> = ({ title, label, onClick, type = 'button', className = '', icon, items}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -14,9 +23,19 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({ label, items }) => {
 
   return (
     <div className="dropdown">
-      <button className="dropdown-button" onClick={toggleDropdown}>
-        {label}
+      <button className={className} onClick={toggleDropdown}>
+        <FontAwesomeIcon icon={icon} size='2x' style={{color: '#63c37b'}}/>
+        <div>
+          <div className='title-btn'>
+          {title}
+          </div>
+          <div className='label-btn'>
+          {label}
+          </div>
+        </div>
+        <FontAwesomeIcon icon={faCaretDown} />
       </button>
+
       {isOpen && (
         <ul className="dropdown-list">
           {items.map((item, index) => (
