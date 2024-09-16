@@ -10,14 +10,11 @@
 
 .centered-flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center; 
   gap: 10px; 
 }
 
-.icon-green {
-  color: var(--myGreen);
-}
 
 body {
   background-image: url('purple.png'); /* Ruta relativa desde la carpeta public */
@@ -125,27 +122,38 @@ nav {
 
 /*card*/
 .card {
-  background-color: rgb(118, 118, 255);
-  width: 10rem;
-  height: 15rem;
+  position: relative;
+  background-color: #333649;
+  width: 100%;
+  max-width: 9rem;
+  height: 13rem;
   padding: 1rem;
-  border-radius: 2%;
-
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Alinear contenido en columna */
+  justify-content: space-between;
+}
+
+.card-amount {
+  position: relative;
+  z-index: 10;
+  background-color: #3C445B;
+  font-size: small;
 }
 
 .image {
-  width: 50%;
-  height: 5rem;
-  position: relative;
   text-align: center;
 }
 
 .image img {
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
+  display: block;
   object-fit: cover;
-  border-radius: 8px;
+  display: block;
 }
 
 .card p {
@@ -186,14 +194,54 @@ nav {
   color: var(--myGreen);
   font-size: small;
   border-radius: 10px;
-  height: 10px;
-  width: 40px;
+  padding: 2px 4px;
+  width: auto;
+  text-align: center;
 }
 
 #card-state {
   display: flex;
-  font-size:small;
-  align-items: center ;
+  font-size:x-small;
+  align-items: center;
+  margin: 0;
+}
+
+.card p {
+  white-space: nowrap; /* Evita que el texto se expanda verticalmente */
+  overflow: hidden; /* Oculta el texto largo */
+  text-overflow: ellipsis; /* Añade "..." al texto largo */
+  margin: 5px 0;
+  font-size: small;
+}
+
+.card-price {
+  font-size: small;
+  color: #ffffff;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: x-small;
+  color: #888;
+}
+
+.icon-green {
+  color: var(--myGreen);
+  margin-right: 5px;
+}
+
+.card button {
+  background-color: var(--myGreen);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 5px;
+  font-size: small;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #2e7d32;
 }
 
 /*finish card*/

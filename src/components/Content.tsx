@@ -123,10 +123,15 @@ const MyContent = () => {
               </div>
               <div className="image">
                 <img src={card.image} alt={card.name} />
-                <span>{card.name}</span>
               </div>
-              {/* <p>{card.description}</p>
-              <button>Tell me about</button> */}
+              <p>{card.name}</p>
+              <div>
+                <p>{card.price}</p>
+                <p>{card.oldPrice}</p>
+              </div>
+              <p>{card.description}</p>
+              <button>Details</button>
+              <button>ADD</button>
             </div>
           ))}
         </div>
