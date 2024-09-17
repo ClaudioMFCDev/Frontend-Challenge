@@ -485,6 +485,19 @@ nav {
   margin: 0 10px;
 }
 
+.footer{
+  width: 100vw;
+  margin: auto;
+}
+
+.payment-methods,
+.social-icons,
+.footer-links,
+.footer-bottom {
+  max-width: 1200px; /* Limita el contenido para que no se estire demasiado */
+  margin: 0 auto; /* Centra el contenido dentro del footer */
+}
+
 .footer-links {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
