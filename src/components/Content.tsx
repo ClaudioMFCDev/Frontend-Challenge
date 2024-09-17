@@ -1,5 +1,4 @@
 import {
-  faGhost,
   faFeatherPointed,
   faSackDollar,
   faSliders,
@@ -8,7 +7,6 @@ import {
   faCartShopping,
   faDragon,
 } from "@fortawesome/free-solid-svg-icons";
-import MyPassPages from "./Button/PassPages";
 import DropdownButton from "./Button/SelectBtn";
 import SearchInput from "./Button/Search";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -136,7 +134,7 @@ const MyContent = () => {
       <h2 className="h2-top">Condimentum consectetur</h2>
       <div id="filters">
         <DropdownButton
-          label="Select a game"
+          label="Select game"
           items={items}
           icon={faWandSparkles}
           className="dropdown-button-opac dropdown-button-lg"

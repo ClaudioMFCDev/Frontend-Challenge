@@ -26,6 +26,7 @@ nav {
   align-items: center;
   padding: 0 2rem;
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav-content {
@@ -91,11 +92,11 @@ nav {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  margin: 13rem;
+  margin: 3rem 13rem;
 }
 
 .content h2 {
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 700;
   color: #ffffff;
 }
@@ -292,10 +293,13 @@ nav {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-size: 10px;
 }
 
+
 .dropdown-button-lg {
-  width: 20rem;
+  width: 15rem;
+  height: 3rem;
   color: white;
   gap: 5rem;
 }
@@ -357,7 +361,7 @@ nav {
 
 .search-input {
   width: 100%; /* Mantiene el ancho al 100% del contenedor */
-  height: 50px;
+  height: 30px;
   padding: 8px 32px 8px 40px; /* Padding ajustado para el ícono */
   background-color: transparent; /* Fondo transparente */
   border: none; /* Elimina los bordes */
@@ -437,5 +441,108 @@ nav {
   font-weight: bold;
 }
 
+/*footer*/
 
+.footer {
+  background-color: #313342;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-left: 12rem;
+  background-color: #2B2D2C;
+}
+
+.payment-methods img {
+  height: 40px;
+  margin: 0 10px;
+}
+
+.payment-methods span {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 12rem;
+
+}
+
+.social-icons img {
+  height: 30px;
+  width: 30px;
+  margin: 0 10px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 13rem;
+  margin-right: 13rem;
+  border-top: 1.5px solid #4f5280;
+  padding-top: 2rem;
+}
+
+.footer-links img {
+  margin-right: 4rem;
+}
+
+.footer-links p{
+  font-size: small;
+}
+
+.footer-links .rate {
+  display: flex;
+  align-items:flex-start;
+  padding-top: 10px;
+}
+
+.footer-links span {
+  font-size: 0.8rem;
+}
+
+.footer-links h3 {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+
+  padding-top: 5px;
+  color: #666;
+  font-size: 0.9rem;
+}
 
