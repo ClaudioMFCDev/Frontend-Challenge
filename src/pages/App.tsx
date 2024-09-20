@@ -3,7 +3,7 @@ import MyNavbar from '../components/Navbar';
 import MyContent from '../components/Content';
 import MyFooter from '../components/Footer';
 
-import '../App.css';
+import '../styles/app.css';
 
 
 function App() {

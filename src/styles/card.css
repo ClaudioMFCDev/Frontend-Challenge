@@ -1,0 +1,111 @@
+
+/*card*/
+.card {
+    background-color: #333649;
+    width: 120px; /* Ajusta el tamaño de la tarjeta */
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  
+  .card-amount {
+    background-color: #3c445b;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .card-amount input {
+    all: unset;
+    width: 30px;
+    background-color: transparent;
+  }
+  
+  .card-stock {
+    background-color: transparent;
+    color: var(--myGreen);
+    padding: 2px 1px;
+    border-radius: 5px;
+    border: 1px solid var(--myGreen);
+    margin-bottom: 2px;
+    margin-top: 0;
+    text-align: center;
+    width: 4rem;
+  }
+  
+  .image {
+    margin-top: 5px;
+    text-align: left;
+  }
+  
+  .image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .card-details {
+    text-align: left;
+  }
+  
+  #card-state {
+    display: flex;
+    font-size: x-small;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .card-name {
+    font-weight: bold;
+    margin: 0;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-price {
+    font-size: 12px;
+    color: white;
+    margin: 5px 0;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #ff5252;
+    font-size: 12px;
+  }
+  
+  .card-description {
+    font-size: 12px;
+    color: #b0b0b0;
+    margin: 6px 0;
+  }
+  
+  .card-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .top-buttons {
+    display: flex;
+  }
+  
+  .top-cards {
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+  }
+  

@@ -1,0 +1,66 @@
+.sign-in-btn {
+  all: unset;
+  height: 0.2px;
+  background-color: var(--myGreen);
+  font-size: 0.7rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.details-btn,
+.add-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.add-btn {
+  background-color: #4c56c0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+}
+
+.add-btn svg {
+  margin-left: 5px;
+}
+
+.dropdown-button {
+  padding: 10px;
+  background-color: #37394e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown-button-opac {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.05); /* Blanco con 90% opacidad */
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 10px;
+}
+
+.dropdown-button-lg {
+  width: 15rem;
+  height: 3rem;
+  color: white;
+  gap: 5rem;
+}
