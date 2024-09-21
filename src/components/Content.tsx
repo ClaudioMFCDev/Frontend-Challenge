@@ -9,122 +9,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import DropdownButton from "./Button/SelectBtn";
 import SearchInput from "./Button/Search";
+import Card from '../components/card/Card';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Pagination from "./Button/Pagination";
+import { cards } from './card-data'; // Import the cards array
+
 
 const items: string[] = ["featured", "price", "rarity"];
-const cards = [
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Ward 123",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward1.png",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Galactic ward",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward2.jpg",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Prestigious ward",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward3.png",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Ward 123",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward1.png",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Galactic ward",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward2.jpg",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Prestigious ward",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward3.png",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Ward 123",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward1.png",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Galactic ward",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward2.jpg",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Prestigious ward",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward3.png",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Galactic ward",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward2.jpg",
-  },
-  {
-    state: "ON SALE",
-    stock: "In sock",
-    price: "$450.00",
-    oldPrice: "$522.50",
-    icon: "faGhost",
-    name: "Prestigious ward",
-    description: "Melisa is a dog who love watch movies and eat pop corn",
-    image: "/ward3.png",
-  },
-];
+
+
 
 const MyContent = () => {
     const currentPage = 1; // Cambia esta variable para la página actual
@@ -168,44 +61,16 @@ const MyContent = () => {
         </div>
         <div className="cards-container">
           {cards.map((card, index) => (
-            <div className="card">
-              <div className="card-header">
-                <p id="card-state">
-                  <FontAwesomeIcon icon={faCircle} className="icon-green" />
-                  ON SALE
-                </p>
-                <div className="card-amount">
-                    <input type="number" value={1} />
-                </div>
-              </div>
-
-              <div className="card-stock">
-                <span className="stock-label">in stock</span>
-              </div>
-
-              <div className="image">
-                <img src={card.image} alt={card.name} />
-              </div>
-
-              <div className="card-details">
-                <p className="card-name">{card.name}
-                <FontAwesomeIcon icon={faDragon} className="icon-green"/>
-                </p>
-                <p className="card-price">
-                  $450.00 <span className="old-price">$522.50</span>
-                </p>
-                <p className="card-description">
-                  Lorem ipsum dolor sit amet...
-                </p>
-              </div>
-
-              <div className="card-actions">
-                <button className="details-btn">DETAILS</button>
-                <button className="add-btn">
-                  ADD <FontAwesomeIcon icon={faCartShopping} />
-                </button>
-              </div>
-            </div>
+            <Card
+            key={index}
+            state={card.state}
+            stock={card.stock}
+            price={card.price}
+            oldPrice={card.oldPrice}
+            name={card.name}
+            description={card.description}
+            image={card.image}
+            />
           ))}
         </div>
         <div id="pass-pages">
