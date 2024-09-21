@@ -8,6 +8,16 @@
   --myGreen: #5fd67c; 
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
 
 .flex {
   display: flex;
@@ -20,11 +30,8 @@ body {
   background-position: center; /* La imagen está centrada */
   background-repeat: no-repeat; /* La imagen no se repite */
   min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
-  margin: 0; /* Elimina cualquier margen predeterminado del body */
+  width: 100%;
 }
-
-
-
 
 #filters {
   display: flex;

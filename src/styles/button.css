@@ -11,6 +11,23 @@
   gap: 5px;
 }
 
+@media (max-width: 1024px) {
+  .sign-in-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .sign-in-btn {
+    padding: 0.8rem;
+    font-size:x-small;
+    font-weight: 600;
+  }
+}
+
+
+
+
 .details-btn,
 .add-btn {
   background-color: transparent;
