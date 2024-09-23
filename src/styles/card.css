@@ -2,7 +2,7 @@
 /*card*/
 .card {
     background-color: #333649;
-    width: 120px; /* Ajusta el tamaño de la tarjeta */
+    width: 140px; /* Ajusta el tamaño de la tarjeta */
     padding: 10px 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -35,7 +35,7 @@
   .card-stock {
     background-color: transparent;
     color: var(--myGreen);
-    padding: 2px 1px;
+    padding: 0 1px 1px;
     border-radius: 5px;
     border: 1px solid var(--myGreen);
     margin-bottom: 2px;
@@ -43,6 +43,7 @@
     text-align: center;
     width: 4rem;
   }
+
   
   .image {
     margin-top: 5px;

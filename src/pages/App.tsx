@@ -9,8 +9,8 @@ function App() {
   return (
     <div>
       <MyNavbar/>
-      {/* <MyContent/>
-      <MyFooter/> */}
+      <MyContent/>
+      {/* <MyFooter/> */}
     </div>
   );
 }
