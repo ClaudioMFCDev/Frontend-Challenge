@@ -24,13 +24,14 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({ title, label, onClick, 
   return (
     <div className="dropdown">
       <button className={className} onClick={toggleDropdown}>
-        <FontAwesomeIcon icon={icon} size='2x' style={{color: '#63c37b'}}/>
-        <div>
-          <div className='title-btn'>
-          {title}
-          </div>
+        <div id='icon-label'>
+          <FontAwesomeIcon icon={icon} size='2x' style={{color: '#63c37b'}}/>
+
           <div className='label-btn'>
-          {label}
+          <div className='title-btn'>
+            <p>{title}</p>
+          </div>
+            <p>{label}</p>
           </div>
         </div>
         <FontAwesomeIcon icon={faCaretDown} />

@@ -20,13 +20,10 @@
 @media (max-width: 850px) {
   .sign-in-btn {
     padding: 0.8rem;
-    font-size:x-small;
+    font-size: x-small;
     font-weight: 600;
   }
 }
-
-
-
 
 .details-btn,
 .add-btn {
@@ -52,6 +49,51 @@
   margin-left: 5px;
 }
 
+.text-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-btn {
+  margin-left: 2px;
+}
+
+.title-btn > p {
+  margin: 0;
+  font-size: xx-small;
+  display: grid;
+  justify-content: flex-start;
+}
+
+.label-btn > p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 5px;
+  display: grid;
+  justify-content: flex-start;
+}
+
+
+.dropdown-list {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.dropdown-list-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list-item:hover {
+  background-color: #f1f1f1;
+}
+
 .dropdown-button {
   padding: 10px;
   background-color: #37394e;
@@ -65,19 +107,87 @@
 
 .dropdown-button-opac {
   padding: 10px;
+  height: 3rem;
+  width: 8rem;
   background-color: rgba(255, 255, 255, 0.05); /* Blanco con 90% opacidad */
   color: white;
   border: none;
+  border-right: 0.5px solid #4c56c0;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 10px;
+
 }
 
 .dropdown-button-lg {
-  width: 15rem;
-  height: 3rem;
+  width: 18rem;
   color: white;
-  gap: 5rem;
+  gap: 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  border: none;
+}
+
+.dropdown-button-lg .label-btn {
+  margin-left: 5px;
+}
+
+#icon-label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+/*search button*/
+
+.search-form {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente si es necesario */
+  align-items: center;
+  width: 100%; /* Asegura que el form ocupe el 100% del ancho disponible */
+  max-width: 600px; /* Ajusta el ancho máximo si es necesario */
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%; /* Mantiene el ancho al 100% del contenedor */
+  height: 30px;
+  padding: 8px 32px 8px 40px; /* Padding ajustado para el ícono */
+  background-color: transparent; /* Fondo transparente */
+  border: none; /* Elimina los bordes */
+  border-radius: 4px; /* Puedes ajustar el borde redondeado si lo deseas */
+  font-size: 16px;
+  color: #fff; /* Texto de color blanco (o cualquier otro que prefieras) */
+  box-sizing: border-box; /* Asegura que el padding y otros estilos no afecten el tamaño */
+}
+
+.search-input::placeholder {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Cambia el color a blanco semi-transparente */
+  opacity: 1; /* Asegura que la opacidad se aplique completamente en algunos navegadores */
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  pointer-events: none; /* Asegura que el icono no interrumpa la escritura */
+}
+
+.search-input:focus {
+  outline: none;
 }
