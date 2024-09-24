@@ -29,7 +29,7 @@ const MyContent = () => {
           icon={faWandSparkles}
           className="dropdown-button-opac dropdown-button-lg"
         />
-        <div className="flex">
+        <div id="bottom-filters" className="flex">
           <SearchInput />
           <DropdownButton
             title="Price"

@@ -124,11 +124,31 @@
 .dropdown-button-lg {
   width: 18rem;
   color: white;
-  gap: 3rem;
   display: flex;
   justify-content: space-between;
   font-size: small;
   border: none;
+}
+
+@media (max-width: 1300px) {
+  .dropdown-button-opac {
+    width: 6rem;
+  }
+  .dropdown-button-lg {
+    width: 14rem;
+  }
+
+}
+
+@media (max-width: 1100px) {
+  .dropdown-button-opac {
+    width: 6rem;
+  }
+
+  .dropdown-button-lg {
+    width: 12rem;
+    margin-right: 0.7rem;
+  }
 }
 
 .dropdown-button-lg .label-btn {
@@ -150,6 +170,12 @@
   align-items: center;
   width: 100%; /* Asegura que el form ocupe el 100% del ancho disponible */
   max-width: 600px; /* Ajusta el ancho máximo si es necesario */
+}
+
+@media (max-width: 500px) {
+  .search-form {
+    width: 80%;
+  }
 }
 
 .search-container {
